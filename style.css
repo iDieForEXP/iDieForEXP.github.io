@@ -203,15 +203,3 @@ input:hover {
 	top: 48px;
 	left: 265px;
 }
-
-#combatsection {
-	width: 560px;
-	height: 550px;
-	position: relative;
-	left: 1165px;
-	top: -1816px;
-	background-color: white;
-	border-style: solid;
-	padding-top: 40px;
-	padding-bottom: 40px;
-}	
