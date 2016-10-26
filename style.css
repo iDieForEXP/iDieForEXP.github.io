@@ -1,17 +1,68 @@
 * {margin: 0px; padding: 0px;}
 
+html {
+	overflow: hidden;
+}
+
 body {
 	background-image: url("images/webbackground.jpg");
 	font-family: "Courier New";
 	font-weight: bold;
 }
 
+select {
+	background-color: #f1f1f1;
+	border: 2px solid #ccc;
+    border-radius: 4px;
+	padding: 2px;
+	cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+select:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input {
+	background-color: #f1f1f1;
+	border: 2px solid #ccc;
+    border-radius: 4px;
+	padding: 2px;
+	cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+input:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button {
+	background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 #mainheader {
-	width: 80%;
+	position: relative;
+	left: 189px;
+	width: 1536px;
 	background-color: white;
 	margin-top: 20px;
-	margin-left: auto;
-	margin-right: auto;
 	border-style: solid;
 }
 
@@ -21,10 +72,10 @@ body {
 }
 
 #subheader {
-	width: 80%;
+	position: relative;
+	left: 189px;
+	width: 1536px;
 	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 2px;
 	border-top-style: solid;
 	border-style: solid;
@@ -51,7 +102,7 @@ body {
 }
 
 #currentstats {
-	width: 30%;
+	width: 250px;
 	position: relative;
 	left: 189px;
 	background-color: white;
@@ -59,4 +110,95 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 30px;
+}
+
+#currentstats h3 {
+	padding-bottom: 14px;
+}
+
+#currentstats p {
+	position: relative;
+	left: 50px;
+}
+
+#currentstats input {
+	position: relative;
+	width: 40px;
+	top: -21px;
+	left: -4px;
+}
+
+#commonchecks {
+	width: 650px;
+	height: 282px;
+	position: relative;
+	left: 477px;
+	top: -308px;
+	background-color: white;
+	border-style: solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+}
+
+#commonchecks h3 {
+	padding-bottom: 30px;
+}
+
+#commonchecks p {
+	padding-bottom: 8px;
+}
+
+#commonchecks select {
+	position: relative;
+	top: -28px;
+	left: 150px;
+}
+
+#commonchecks #details {
+	position: relative;
+	left: 340px;
+	top: -90px;
+}
+
+#commonchecks #duplicate {
+	color: red;
+	position: relative;
+	left: 530px;
+	top: -168px;
+}
+
+#commonchecks .button {
+	position: relative;
+	top: -165px;
+	left: 100px;
+}
+
+#portrait {
+	width: 560px;
+	height: 550px;
+	position: relative;
+	left: 1165px;
+	top: -616px;
+	background-color: white;
+	border-style: solid;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#portrait img {
+	display: block;
+	margin: auto;
+}
+
+#portrait p {
+	position: relative;
+	top: 70px;
+	left: 225px;
+}
+
+#portrait select {
+	position: relative;
+	top: 48px;
+	left: 275px;
 }
