@@ -166,6 +166,7 @@ input:hover {
 	position: relative;
 	left: 530px;
 	top: -168px;
+	visibility: hidden;
 }
 
 #commonchecks .button {
