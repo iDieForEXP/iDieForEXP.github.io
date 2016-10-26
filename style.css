@@ -155,7 +155,7 @@ input:hover {
 	left: 150px;
 }
 
-#commonchecks #details {
+#commonchecks .details {
 	position: relative;
 	left: 340px;
 	top: -90px;
