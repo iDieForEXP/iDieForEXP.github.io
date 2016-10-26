@@ -203,3 +203,9 @@ input:hover {
 	top: 48px;
 	left: 265px;
 }
+
+#combatsection {
+	position: relative;
+	top: -500px;
+	left: 189px;
+}	
