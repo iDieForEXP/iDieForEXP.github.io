@@ -89,6 +89,18 @@ input:hover {
 	display: inline-block;
 }
 
+#subheader a {
+	color: black;
+}
+
+#subheader a:hover {
+	color: red;
+}
+
+#subheader a:visited {
+	color: black;
+}
+
 #subheader #middletext {
 	position: relative;
 	left: 335px;
