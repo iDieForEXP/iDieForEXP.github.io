@@ -28,16 +28,24 @@ var numOpponentPerception;
 function CheckRoll() {
 	
 	//Loading Variables Up From User Input
-	numStrength = document.getElementById("bxStrength").value;
-	numStamina = document.getElementById("bxStamina").value;
-	numAgility = document.getElementById("bxAgility").value;
-	numIntelligence = document.getElementById("bxIntelligence").value;
-	numCharisma = document.getElementById("bxCharisma").value;
-	numPerception = document.getElementById("bxPerception").value;
-	numCircumstantialFactors = document.getElementById("bxCircumstantialFactors").value;
+	numStrength = Number(document.getElementById("bxStrength").value);
+	numStamina = Number(document.getElementById("bxStamina").value);
+	numAgility = Number(document.getElementById("bxAgility").value);
+	numIntelligence = Number(document.getElementById("bxIntelligence").value);
+	numCharisma = Number(document.getElementById("bxCharisma").value);
+	numPerception = Number(document.getElementById("bxPerception").value);
+	numCircumstantialFactors = Number(document.getElementById("bxCircumstantialFactors").value);
 	
 	//Making the Roll
 	numRoll = Math.floor(Math.random() * 20 + 1);
+	if (document.getElementById("duplicate").style.visibility === "visible"){
+		document.getElementById("duplicate").style.visibility = "hidden";
+	}
+	
+	//Checking to see if the roll was a duplicate
+	if (numRoll === prevRoll) {
+		document.getElementById("duplicate").style.visibility = "visible";
+	}
 	
 	//Checking the complexity of the check
 	switch (document.getElementById("Complexity").value){
@@ -104,9 +112,11 @@ function CheckRoll() {
 	}
 	if (numRoll < numFailureFactor + 1){
 		document.getElementById("success").innerHTML = "It was a FAILURE!";
+		numExperience = 0;
 	}
 	if (numRoll === 1){
 		document.getElementById("success").innerHTML = "It was a CRITICAL FAILURE!";
+		numExperience = 0;
 	}
 	
 	//Reporting the dice roll
@@ -117,6 +127,9 @@ function CheckRoll() {
 	
 	//Reporting experience gain
 	document.getElementById("experience").innerHTML = "Experience Payout: " + numExperience + " exp!";
+	
+	//Saving last roll
+	prevRoll = numRoll;
 }
 
 function ChangePic() {
