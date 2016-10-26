@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Auto Roller</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
 </head>
 <body>
 
@@ -50,19 +51,19 @@
 		</select>	
 		<p>Circumstantial Factors (+/-):</p>
 		<input type="number" id="bxCircumstantialFactors" value="-2">
-		<h3 id="details">Check Details:</h3>
-		<p id="details">It was a XXXXXXX!</p>
-		<p id="details">You rolled a(n) XX.</p>
-		<p id="details">You needed a(n) XX or higher.</p>
-		<p id="details">Experience Payout: 00 exp!</p>
+		<h3 class="details">Check Details:</h3>
+		<p id="success" class="details">It was a XXXXXXX!</p>
+		<p id="rolltotal" class="details">You rolled a(n) XX.</p>
+		<p id="rollstandards" class="details">You needed a(n) XX or higher.</p>
+		<p id="experience" class="details">Experience Payout: 00 exp!</p>
 		<p id="duplicate">DUPLICATE!</p>
-		<button class="button" id="RollCheckButton">Roll!</button>
+		<button onclick="CheckRoll()" class="button" id="RollCheckButton">Roll!</button>
 	</div>
 	
 	<div id="portrait">
-		<img src="images/blank.jpg" />
+		<img id="picturebox" src="images/blank.jpg" />
 		<p>Sin:</p>
-		<select id="Sin">
+		<select onclick="ChangePic()" id="Sin">
 			<option value="N/A">Sin...</option>
 			<option value="Lust">Lust</option>
 			<option value="Envy">Envy</option>
