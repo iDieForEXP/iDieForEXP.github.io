@@ -12,7 +12,7 @@
 		<img src="images/logo.jpg" height="200" />
 	</header>
 	<header id="subheader">
-		<p><a href="rulebook.pdf">RULEBOOK - V3.2.4 </a></p>
+		<p><a href="rulebook.pdf" target="_blank">RULEBOOK - V3.2.4 </a></p>
 		<p id="middletext">WEDNESDAY, SEPTEMBER 17, 1890</p>
 		<p id="righttext">THREE CENTS PER COPY</p>
 	</header>
@@ -57,7 +57,7 @@
 		<p id="rollstandards" class="details">You needed a(n) XX or higher.</p>
 		<p id="experience" class="details">Experience Payout: 00 exp!</p>
 		<p id="duplicate">DUPLICATE!</p>
-		<button onclick="CheckRoll()" class="button" id="RollCheckButton">Roll!</button>
+		<button onclick="CheckRoll()" class="button" id="RollCheckButton">Roll</button>
 	</div>
 	
 	<div id="portrait">
@@ -72,7 +72,74 @@
 			<option value="Gluttony">Gluttony</option>
 			<option value="Sloth">Sloth</option>
 			<option value="Pride">Pride</option>
+		</select>
 	</div>
 
+	<div id="combatchecks">
+		<h3>Combat:</h3>
+		<p>Skill with Weapon:</p>
+		<select id="weaponskill">
+			<option value="Basic">Basic</option>
+			<option value="Experienced">Experienced</option>
+		</select>
+		<p>Type of Attack:</p>
+		<select id="attacktype">
+			<option value="Unarmed">Unarmed</option>
+			<option value="Melee(Power)">Melee(Power)</option>
+			<option value="Melee(Swift)">Melee(Swift)</option>
+			<option value="Gunplay">Gunplay</option>
+			<option value="Sniper">Sniper</option>
+			<option value="Blast">Blast</option>
+		</select>
+		<p>Aim Check Type</p>
+		<select id="aimchecktype">
+			<option value="N/A">N/A</option>
+			<option value="Likely">Likely</option>
+			<option value="Standard">Standard</option>
+			<option value="Difficult">Difficult</option>
+			<option value="Unlikely">Unlikely</option>
+			<option value="Miraculous">Miraculous</option>
+		</select>
+		<p>Enemies' Agility:</p>
+		<input type="number" id="bxEnemiesAgility" value="2">
+		<p>Enemies' Perception:</p>
+		<input type="number" id="bxEnemiesPerception" value="2">
+		<p>Target Zone:</p>
+		<select id="targetzone">
+			<option value="N/A">N/A</option>
+			<option value="Head">Head</option>
+			<option value="Eyes">Eyes</option>
+			<option value="WristsorAnkles">Wrists or Ankles</option>
+			<option value="ArmsorLegs">Arms or Legs</option>
+			<option value="InternalOrgan">Internal Organ</option>
+		</select>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxMercy">Mercy Talent</p>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxBrute">Brute Talent</p>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxDuelist">Duelist Talent</p>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxGunslinger">Gunslinger Talent</p>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxAssassin">Assassin Talent</p>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxManiac">Maniac Talent</p>
+		<p id="cbtext"><input type="checkbox" class="cbboxes" id="boxSniper">Sniper Talent</p>
+		<p class="blocksection">Block Type:</p>
+		<select id="blocktype">
+			<option value="Unarmed">Unarmed</option>
+			<option value="Armed">Armed</option>
+		</select>
+		<p class="blocksection" id="blockreporter">Your Block total is a(n) XX!</p>
+		<p class="blocksection" id="blockduplicate">DUPLICATE!</p>
+		<button onclick="BlockRoll()" class="button" id="blockbutton">Block!</button>
+		<p class="dodgesection"><input type="checkbox" id="boxRangedAttack">Ranged Attack</p>
+		<p class="dodgesection"><input type="checkbox" id="boxGymnastics">Gymnastics Talent</p>
+		<p class="dodgesection" id="dodgereporter">It was a XXXXXXX!</p>
+		<p class="dodgesection" id="dodgerollreporter">You rolled a(n) XX.</p>
+		<p class="dodgesection" id="dodgebeatreporter">You needed a(n) XX or higher.</p>
+		<p class="dodgesection" id="dodgeduplicate">DUPLICATE!</p>
+		<button onclick="DodgeRoll()" class="button" id="dodgebutton">Dodge</button>
+		<button onclick="AttackRoll()" class="button" id="attackbutton">Attack</button>
+	</div>
+	<footer>
+		<p><a href="bayport.html" target="_blank">BAYPORT MAP</a></p>
+	</footer>
+	
 </body>
 </html>
