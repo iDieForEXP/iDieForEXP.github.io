@@ -361,3 +361,12 @@ footer a:visited {
 footer a:hover {
 	color: red;
 }
+
+#bigmap {
+	margin: auto;
+	margin-top: 60px;
+	padding: 40px;
+	background-color: white;
+	border-style: solid;
+	width: 800px;
+}
