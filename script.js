@@ -138,6 +138,8 @@ function CheckRoll() {
 	//Reporting the dice roll
 	document.getElementById("rolltotal").innerHTML = "You rolled a(n) " + numRoll + ".";
 	
+	numFailureFactor = Math.floor(NumFailureFactor);
+	
 	//Reporting the standards
 	document.getElementById("rollstandards").innerHTML = "You needed a(n) " + (numFailureFactor + 1) + " or higher.";
 	
