@@ -152,11 +152,11 @@ function BlockRoll() {
 	numStamina = Number(document.getElementById("bxStamina").value);
 	document.getElementById("blockduplicate").style.visibility = "hidden";
 	if (document.getElementById("blocktype").value === "Unarmed") {
-		numBlock = Math.floor(Math.random() * 6 + 1);
+		numBlock = (Math.floor(Math.random() * 6 + 1) + (numStamina/2));
 		document.getElementById("blockreporter").innerHTML = "Your Block total is a(n) " + numBlock + "!";
 	}
 	else {
-		numBlock = (Math.floor(Math.random() * 6 + 1) + (numStamina/2));
+		numBlock = (Math.floor(Math.random() * 6 + 1) + (numStamina));
 		document.getElementById("blockreporter").innerHTML = "Your Block total is a(n) " + numBlock + "!";
 	}
 	
