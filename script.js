@@ -156,7 +156,7 @@ function BlockRoll() {
 		document.getElementById("blockreporter").innerHTML = "Your Block total is a(n) " + numBlock + "!";
 	}
 	else {
-		numBlock = (Math.floor(Math.random() * 6 + 1) + (numStamina));
+		numBlock = (Math.floor(Math.random() * 8 + 1) + (numStamina/2));
 		document.getElementById("blockreporter").innerHTML = "Your Block total is a(n) " + numBlock + "!";
 	}
 	
