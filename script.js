@@ -109,7 +109,7 @@ function CheckRoll() {
 	}
 	
 	//Calculating the number you need to beat
-	numFailureFactor = 20 - numSuccessFactor;
+	numFailureFactor = Math.floor(20 - numSuccessFactor);
 	
 	//If failure factor is a 20 or higher, set it to 19 since one can always roll a 20
 	if (numFailureFactor >= 20) {
