@@ -121,7 +121,7 @@ function CheckRoll() {
 	
 	//Reporting on the successfulness or not
 	if (numRoll >= numFailureFactor + 1){
-		document.getElementById("success").innerHTML = "It was a SUCCESS!Changed";
+		document.getElementById("success").innerHTML = "It was a SUCCESS!";
 	}
 	if (numRoll === 20){
 		document.getElementById("success").innerHTML = "It was a CRITICAL SUCCESS!";
@@ -354,6 +354,7 @@ function AttackRoll() {
 		case "Eyes":
 			if ((((numRoll - numPerceptionBonus) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 20){
 				document.getElementById("attacktargetreporter").innerHTML = "EYE SHOT!!!";
+				boolCrit = true;
 			}
 			break;
 		case "WristsorAnkles":
