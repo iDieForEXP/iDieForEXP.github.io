@@ -121,7 +121,7 @@ function CheckRoll() {
 	
 	//Reporting on the successfulness or not
 	if (numRoll >= numFailureFactor + 1){
-		document.getElementById("success").innerHTML = "It was a SUCCESS!";
+		document.getElementById("success").innerHTML = "It was a SUCCESS!Changed";
 	}
 	if (numRoll === 20){
 		document.getElementById("success").innerHTML = "It was a CRITICAL SUCCESS!";
