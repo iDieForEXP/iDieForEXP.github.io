@@ -329,10 +329,6 @@ function AttackRoll() {
 			break;
 	}
 	
-	if (numRoll === 1) {
-		boolAimSuccess = false;
-	}
-	
 	if (document.getElementById("attacktype").value === "Gunplay" || document.getElementById("attacktype").value === "Sniper" || document.getElementById("attacktype").value === "Blast"){
 		boolRanged = true;
 	}
