@@ -148,6 +148,13 @@ function CheckRoll() {
 	prevRoll = numRoll;
 }
 
+window.onload = disableButton;
+
+function disableButton() {
+	document.getElementById("myBtn").disabled = true;
+}
+
+
 function BlockRoll() {
 	numStamina = Number(document.getElementById("bxStamina").value);
 	document.getElementById("blockduplicate").style.visibility = "hidden";
