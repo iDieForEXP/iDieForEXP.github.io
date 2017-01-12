@@ -288,7 +288,7 @@ function AttackRoll() {
 			boolAimSuccess = true;
 			break;
 		case "Likely":
-			if (numRoll > 4){
+			if (numRoll + numPerceptionBonus > 4){
 				boolAimSuccess = true;
 			}
 			else {
@@ -296,7 +296,7 @@ function AttackRoll() {
 			}
 			break;
 		case "Standard":
-			if (numRoll > 8) {
+			if (numRoll + numPerceptionBonus> 8) {
 				boolAimSuccess = true;
 			}
 			else {
@@ -304,7 +304,7 @@ function AttackRoll() {
 			}
 			break;
 		case "Difficult":
-			if (numRoll > 15) {
+			if (numRoll + numPerceptionBonus> 15) {
 				boolAimSuccess = true;
 			}
 			else {
@@ -312,7 +312,7 @@ function AttackRoll() {
 			}
 			break;
 		case "Unlikely":
-			if (numRoll > 18) {
+			if (numRoll + numPerceptionBonus> 18) {
 				boolAimSuccess = true;
 			}
 			else {
@@ -320,7 +320,7 @@ function AttackRoll() {
 			}
 			break;
 		case "Miraculous":
-			if (numRoll > 19) {
+			if (numRoll + numPerceptionBonus> 19) {
 				boolAimSuccess = true;
 			}
 			else {
