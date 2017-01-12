@@ -383,6 +383,9 @@ function AttackRoll() {
 			numDamage = ((Math.floor(Math.random() * meleePowerDice + 1)) * numCritMod);
 			document.getElementById("attackreporter").innerHTML = "Your Attack HIT for a CRITICAL of " + numDamage + " damage!";
 		}
+		if (document.getElementById("attacktype").value === "Melee(Power)" && boolAimSuccess === false){
+			document.getElementById("attackreporter").innerHTML = "Your Attack MISSED!";
+		}
 		if (document.getElementById("attacktype").value === "Melee(Swift)" && boolCrit === false){
 			numDamage = Math.floor(Math.random() * meleeSwiftDice + 1);
 			document.getElementById("attackreporter").innerHTML = "Your Attack HIT for a total of " + numDamage + " damage!";
@@ -390,6 +393,9 @@ function AttackRoll() {
 		if (document.getElementById("attacktype").value === "Melee(Swift)" && boolCrit === true){
 			numDamage = ((Math.floor(Math.random() * meleeSwiftDice + 1)) * numCritMod);
 			document.getElementById("attackreporter").innerHTML = "Your Attack HIT for a CRITICAL of " + numDamage + " damage!";
+		}
+		if (document.getElementById("attacktype").value === "Melee(Swift)" && boolAimSuccess === false){
+			document.getElementById("attackreporter").innerHTML = "Your Attack MISSED!";
 		}
 		if (document.getElementById("attacktype").value === "Gunplay"){
 			if (boolAimSuccess === true && boolCrit === true){
@@ -437,6 +443,9 @@ function AttackRoll() {
 		if (document.getElementById("attacktype").value === "Unarmed" && boolCrit === true){
 			numDamage = ((Math.floor(Math.random() * 4 + 1)) * numCritMod);
 			document.getElementById("attackreporter").innerHTML = "Your Attack HIT for a CRITICAL of " + numDamage + " damage!";
+		}
+		if (document.getElementById("attacktype").value === "Unarmed" && boolAimSuccess === false){
+			document.getElementById("attackreporter").innerHTML = "Your Attack MISSED!";
 		}
 	}
 	
