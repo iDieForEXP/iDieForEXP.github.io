@@ -241,9 +241,9 @@ function AttackRoll() {
 		numPerceptionBonus = numPerception / 2;
 	}
 	
-	numRoll = Math.floor(Math.random() * 20 + 1) + numPerceptionBonus;
+	numRoll = Math.floor(Math.random() * 20 + 1);
 	boolCrit = false;
-	if (numRoll-numPerceptionBonus === 20) {
+	if (numRoll === 20) {
 		boolCrit = true;
 	}
 	document.getElementById("attacktargetreporter").innerHTML = "";
@@ -253,31 +253,31 @@ function AttackRoll() {
 	}
 	if (document.getElementById("boxBrute").checked === true) {
 		meleePowerDice = 12;
-		if (numRoll - numPerceptionBonus >= 18){
+		if (numRoll >= 18){
 			boolCrit = true;
 		}
 	}
 	if (document.getElementById("boxDuelist").checked === true) {
 		meleeSwiftDice = 10;
-		if (numRoll - numPerceptionBonus >= 18){
+		if (numRoll >= 18){
 			boolCrit = true;
 		}
 	}
 	if (document.getElementById("boxGunslinger").checked === true) {
 		gunplayDice = 8;
-		if (numRoll - numPerceptionBonus >= 18){
+		if (numRoll >= 18){
 			boolCrit = true;
 		}
 	}
 	if (document.getElementById("boxAssassin").checked === true) {
 		sniperDice = 10;
-		if (numRoll - numPerceptionBonus >= 18){
+		if (numRoll >= 18){
 			boolCrit = true;
 		}
 	}
 	if (document.getElementById("boxManiac").checked === true) {
 		blastDice = 13;
-		if (numRoll - numPerceptionBonus >= 18){
+		if (numRoll >= 18){
 			boolCrit = true;
 		}
 	}
@@ -329,6 +329,10 @@ function AttackRoll() {
 			break;
 	}
 	
+	if (numRoll === 1) {
+		boolAimSuccess = false;
+	}
+	
 	if (document.getElementById("attacktype").value === "Gunplay" || document.getElementById("attacktype").value === "Sniper" || document.getElementById("attacktype").value === "Blast"){
 		boolRanged = true;
 	}
@@ -346,29 +350,29 @@ function AttackRoll() {
 	
 	switch (document.getElementById("targetzone").value) {
 		case "Head":
-			if ((((numRoll - numPerceptionBonus) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 15){
+			if ((((numRoll) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 15){
 				document.getElementById("attacktargetreporter").innerHTML = "HEAD SHOT!!!";
 				boolCrit = true;
 			}
 			break;
 		case "Eyes":
-			if ((((numRoll - numPerceptionBonus) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 20){
+			if ((((numRoll) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 20){
 				document.getElementById("attacktargetreporter").innerHTML = "EYE SHOT!!!";
 				boolCrit = true;
 			}
 			break;
 		case "WristsorAnkles":
-			if ((((numRoll - numPerceptionBonus) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 10){
+			if ((((numRoll) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 10){
 				document.getElementById("attacktargetreporter").innerHTML = "WRIST/ANKLE SHOT!!!";
 			}
 			break;
 		case "ArmsorLegs":
-			if ((((numRoll - numPerceptionBonus) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 7){
+			if ((((numRoll) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 7){
 				document.getElementById("attacktargetreporter").innerHTML = "LIMB SHOT!!!";
 			}
 			break;
 		case "InternalOrgan":
-			if ((((numRoll - numPerceptionBonus) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 8){
+			if ((((numRoll) + numRelevantStatValue) - (Math.floor(Math.random() * 20 + 1) + numOpponentRelevantStatValue)) >= 8){
 				document.getElementById("attacktargetreporter").innerHTML = "ORGAN SHOT!!!";
 			}
 			break;
