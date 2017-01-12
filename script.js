@@ -151,7 +151,7 @@ function CheckRoll() {
 window.onload = disableButton;
 
 function disableButton() {
-	document.getElementById("myBtn").disabled = true;
+	document.getElementById("dodgebutton").disabled = true;
 }
 
 
